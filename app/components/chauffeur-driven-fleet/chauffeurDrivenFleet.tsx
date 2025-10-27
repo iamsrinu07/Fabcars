@@ -70,7 +70,7 @@ const ChauffeurDrivenFleet: React.FC = () => {
             'Max 2': <Users className="w-5 h-5" />,
             'Luggage': <Luggage className="w-5 h-5" />,
         };
-        return icons[feature] || null;
+        return icons[feature as keyof typeof icons] || null;
     };
 
     useEffect(() => {
